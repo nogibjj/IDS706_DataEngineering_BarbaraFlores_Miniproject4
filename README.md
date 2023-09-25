@@ -37,3 +37,7 @@ The aim of this project is to set up a GitHub Actions workflow and conduct testi
 
 
 [![3.10 ubuntu_20_04](https://byob.yarr.is/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject4/ubuntu_20_04_Python_3_9)](https://github.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject4/actions/workflows/python_ci_cd.yml)
+
+
+## Link to successful GitHub Actions Matrix run
+https://github.com/nogibjj/IDS706_DataEngineering_BarbaraFlores_Miniproject4/actions/runs/6294832130
