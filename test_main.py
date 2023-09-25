@@ -1,17 +1,7 @@
-from src.main import mean_variable, median_variable, count_variable
+from src.main import function
 
-
-def test_mean():
-    assert mean_variable("data/data_test.csv", "age") == 32
-
-def test_median():
-    assert median_variable("data/data_test.csv", "age") == 30
-
-def test_count_variable():
-    assert count_variable("data/data_test.csv", "age") == 5
-
+def test_function():
+    assert function(1,2) == 4
 
 if __name__ == "__main__":
-    test_mean()
-    test_median()
-    test_count_variable()
+    test_function()
