@@ -8,7 +8,36 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python-version: 3.7
+            name: ubuntu_latest_Python_3_7
+            continue-on-error: true
+          - os: ubuntu-latest
+            python-version: 3.8
+            name: ubuntu_latest_Python_3_8
+            continue-on-error: true
+          - os: ubuntu-latest
+            python-version: 3.9
+            name: ubuntu_latest_Python_3_9
+            continue-on-error: true
+          - os: ubuntu-20.04
+            python-version: 3.7
+            name: ubuntu_20_04_Python_3_7
+            continue-on-error: true
+          - os: ubuntu-20.04
+            python-version: 3.8
+            name: ubuntu_20_04_Python_3_8
+            continue-on-error: true
+          - os: ubuntu-20.04
+            python-version: 3.9
+            name: ubuntu_20_04_Python_3_9
+            continue-on-error: true
+
+        
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
       - name: install packages
