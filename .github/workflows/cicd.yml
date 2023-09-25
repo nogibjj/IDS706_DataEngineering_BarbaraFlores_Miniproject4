@@ -48,3 +48,12 @@ jobs:
         run: make format
       - name: deploy
         run: make deploy
+
+      - name: Build status badge
+        uses: RubbaBoy/BYOB@v1.3.0
+        with:
+          NAME: ${{ matrix.name }}
+          LABEL: ${{ matrix.name }}
+          STATUS: ${{ job.status }}
+          COLOR: ${{ job.status == 'success' && 'green' || job.status == 'failure' && 'red' || 'yellow' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
