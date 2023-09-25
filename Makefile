@@ -9,9 +9,7 @@ format:
 	black src/*.py
 
 lint:
-	#pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
-	nbqa ruff src/*.ipynb
-	ruff check src/*.py
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py src/*.py
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < Dockerfile
