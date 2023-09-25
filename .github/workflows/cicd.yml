@@ -35,8 +35,6 @@ jobs:
             python-version: 3.9
             name: ubuntu_20_04_Python_3_9
             continue-on-error: true
-
-        
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
