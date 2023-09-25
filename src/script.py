@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 from lib import mean_variable, median_variable, count_variable
 
 def aggregate_statistics(path, variable_list):
-    results = dict()
+    a = dict()
     for i in variable_list:
-        results[i] = { 
+        a[i] = { 
             "mean" : mean_variable(path, i) ,
               "median" : median_variable(path, i) , 
               "count" : count_variable(path, i) }
-    return results
+    return a
 
 def hist_plot(path, variable_list):
 
